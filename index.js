@@ -359,6 +359,10 @@ class BrowserLikeWindow extends EventEmitter {
       })
       .on('dom-ready', () => {
         webContents.focus();
+        //add test code for auto click
+        webContents.executeJavaScript(` document.querySelector("#est_en").click();`);
+        
+        
       });
 
     webContents.loadURL(url);

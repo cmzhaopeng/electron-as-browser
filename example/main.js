@@ -8,9 +8,9 @@ function createWindow() {
   browser = new BrowserLikeWindow({
     controlHeight: 99,
     controlPanel: fileUrl(`${__dirname}/renderer/control.html`),
-    startPage: 'https://google.com',
+    startPage: 'https://cn.bing.com',
     blankTitle: 'New tab',
-    debug: true // will open controlPanel's devtools
+    debug: false //true // will open controlPanel's devtools
   });
 
   browser.on('closed', () => {
