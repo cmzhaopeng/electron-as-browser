@@ -104,6 +104,11 @@ class BrowserLikeWindow extends EventEmitter {
             webContents.getTitle()}`
         );
       } else {
+        if (actionName==='testJs')
+        {
+          log.debug('testJs');
+          webContents.executeJavaScript(`document.querySelector("#est_en").click();`);
+        }
         log.error('Invalid webContents action ', actionName);
       }
     };
@@ -360,8 +365,9 @@ class BrowserLikeWindow extends EventEmitter {
       .on('dom-ready', () => {
         webContents.focus();
         //add test code for auto click
-        webContents.executeJavaScript(` document.querySelector("#est_en").click();`);
-        
+      //  webContents.executeJavaScript(`document.querySelector("#est_en").click();`);
+        log.debug('dom-ready', { title: webContents.getTitle() });
+
         
       });
 

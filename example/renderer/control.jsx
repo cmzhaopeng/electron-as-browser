@@ -122,6 +122,10 @@ function Control() {
     action.sendSwitchTab(id);
   };
 
+  const testJs = () =>{
+    action.sendTestJs();
+  };
+
   return (
     <div className="container">
       <div className="tabs">
@@ -147,6 +151,9 @@ function Control() {
           })}
           <span type="plus" style={{ marginLeft: 10 }} onClick={newTab}>
             <IconPlus />
+          </span>
+          <span type="plus" style={{ marginLeft: 10 }} onClick={testJs}>
+            TestJs 
           </span>
         </>
       </div>

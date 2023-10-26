@@ -23,6 +23,7 @@ const sendAct = actName => {
  */
 const sendGoBack = () => sendAct('goBack');
 
+const sendTestJs=()=>sendAct('testJs');
 /**
  * Tell browser view to goForward
  */
@@ -61,6 +62,7 @@ module.exports = {
   sendReload,
   sendStop,
   sendNewTab, // sendNewTab([url])
+  sendTestJs,
   sendSwitchTab, // sendSwitchTab(toID)
   sendCloseTab // sendCloseTab(id)
 };
